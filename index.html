@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="">
+<html class="theme-next pisces use-motion" lang="">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -94,7 +94,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Pisces',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -385,29 +385,21 @@
       
         
           
-            <h1 id="This-is-the-general-markdown-layout-of-my-Leetcode-problem-posts"><a href="#This-is-the-general-markdown-layout-of-my-Leetcode-problem-posts" class="headerlink" title="This is the general markdown layout of my Leetcode problem posts"></a>This is the general markdown layout of my Leetcode problem posts</h1><h2 id="Problem-names"><a href="#Problem-names" class="headerlink" title="Problem names"></a>Problem names</h2><p><a href="https://leetcode.com/problemset/all/" target="_blank" rel="noopener">Link</a></p>
-<p>problem description</p>
-<blockquote>
-<p>example 1<br>balabalabalaaa</p>
-</blockquote>
-<blockquote>
-<p>example 2<br>balabalabalaaa</p>
-</blockquote>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><h4 id="Idea"><a href="#Idea" class="headerlink" title="Idea"></a>Idea</h4><ul>
-<li>balabalabalaaa<ul>
-<li>sublist</li>
-</ul>
-</li>
-<li>balabalabalaaa</li>
-</ul>
-<h4 id="Corner-case"><a href="#Corner-case" class="headerlink" title="Corner case"></a>Corner case</h4><ul>
-<li>balabalabalaaa</li>
-<li>balabalabalaaa</li>
-<li>balabalabalaaa</li>
-</ul>
-<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> coid <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    hello world</span><br><span class="line">    Solution</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          This is the general markdown layout of my Leetcode problem postsProblem namesLink
+problem description
 
-          
+example 1balabalabalaaa
+
+
+example 2balabalabala
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/08/Leetcode/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -558,26 +550,15 @@
       
         
           
-            <h1 id="All-common-and-frequently-used-data-structure-for-Tree-problems"><a href="#All-common-and-frequently-used-data-structure-for-Tree-problems" class="headerlink" title="All common and frequently used data structure for Tree problems"></a>All common and frequently used data structure for Tree problems</h1><h2 id="Tree-structure"><a href="#Tree-structure" class="headerlink" title="Tree structure"></a>Tree structure</h2><p>A tree class will look like this:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">     <span class="keyword">int</span> val;</span><br><span class="line">     TreeNode left;</span><br><span class="line">     TreeNode right;</span><br><span class="line">     TreeNode(<span class="keyword">int</span> x) &#123; val = x; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>A tree structure will look like this:<br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Binary_tree.svg/192px-Binary_tree.svg.png" alt="Tree"></p>
-<h3 id="Advanced-Tree-structure"><a href="#Advanced-Tree-structure" class="headerlink" title="Advanced Tree structure"></a>Advanced Tree structure</h3><p>Some more advanced tree structure might have more than 2 children, like N-ary Tree, and the tree class will look like this<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span></span>&#123;</span><br><span class="line">  TreeNode root;</span><br><span class="line">  List&lt;TreeNode&gt; children;</span><br><span class="line">  <span class="keyword">int</span> val;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="Question-Genres"><a href="#Question-Genres" class="headerlink" title="Question Genres:"></a>Question Genres:</h2><h3 id="1-Probe-Tree"><a href="#1-Probe-Tree" class="headerlink" title="1.Probe Tree"></a>1.Probe Tree</h3><p>A probe tree question is a kind of question that you need to probe every node of the tree to get the answer.</p>
-<h4 id="Data-structure-to-solve-it"><a href="#Data-structure-to-solve-it" class="headerlink" title="Data structure to solve it"></a>Data structure to solve it</h4><ol>
-<li><p>BFS (Breadth-first search)<br>BFS is a way to search the tree level by level. In java, we use the Queue data structure. Queue is a FIFO data structure. In a FIFO data structure, the first element added to the queue will be the first one to be removed.  </p>
-<h5 id="Abstract-code"><a href="#Abstract-code" class="headerlink" title="Abstract code"></a>Abstract code</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">probeTree</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(root==<span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">  Queue&lt;TreeNode&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">  queue.offer(root);</span><br><span class="line">  <span class="keyword">while</span>(!root.isEmpty())&#123;</span><br><span class="line">    <span class="keyword">int</span> size = queue.size();<span class="comment">//size remembers the number of nodes that locates at the current level</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;size;i++)&#123;</span><br><span class="line">      TreeNode node = queue.poll();</span><br><span class="line">      <span class="comment">// some operations at here</span></span><br><span class="line">      <span class="keyword">if</span>(node.left!=<span class="keyword">null</span>)&#123;</span><br><span class="line">        queue.offer(node.left);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span>(node.right!=<span class="keyword">null</span>)&#123;</span><br><span class="line">        queue.offer(node.right);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>DFS (Depth-first search)<br>DFS is a way to probe the whole tree from root to every leaf. The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking. DFS is a FILO data structure. In java we use Stack to do it.</p>
-<h5 id="Abstract-code-1"><a href="#Abstract-code-1" class="headerlink" title="Abstract code"></a>Abstract code</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">probeTree</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(root==<span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">  Stack&lt;TreeNode&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">  stack.push(root);</span><br><span class="line">  <span class="keyword">while</span>(!stack.isEmpty())&#123;</span><br><span class="line">    TreeNode node = stack,pop();</span><br><span class="line">    <span class="comment">//do some operations here</span></span><br><span class="line">    <span class="keyword">if</span>(node.left!=<span class="keyword">null</span>)&#123;</span><br><span class="line">      stack.push(node.left);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(node.right!=<span class="keyword">null</span>)&#123;</span><br><span class="line">      stack.push(node.right);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Recursion<br>Recursion is a way to probe the tree recursively using one method. For one node, we could treat it as the parent node of its children, and also as the child node of its parent. Hence this node is a parent node and a child node. Therefore, we could treat every node as the parent/root node, then do some operations on its child nodes.</p>
-<h5 id="Abstract-code-2"><a href="#Abstract-code-2" class="headerlink" title="Abstract code"></a>Abstract code</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">probeTree</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(root==<span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">  <span class="comment">//do some operations here</span></span><br><span class="line">  probeTree(root.left);</span><br><span class="line">  probeTree(root.right);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h4 id="Here-are-the-list-of-all-questions-that-based-on-probing-a-tree"><a href="#Here-are-the-list-of-all-questions-that-based-on-probing-a-tree" class="headerlink" title="Here are the list of all questions that based on probing a tree"></a>Here are the list of all questions that based on probing a tree</h4><ul>
-<li><a href="https://leetcode.com/problems/maximum-depth-of-binary-tree/description/" target="_blank" rel="noopener">104. Maximum Depth of Binary Tree</a> -Easy</li>
-</ul>
-
-          
+          All common and frequently used data structure for Tree problemsTree structureA tree class will look like this:123456public class TreeNode &#123;     i
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/08/Tree/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -734,7 +715,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
@@ -833,6 +814,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
 
