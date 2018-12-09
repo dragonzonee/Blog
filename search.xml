@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Leetcode]]></title>
+    <url>%2F2018%2F12%2F08%2FLeetcode%2F</url>
+    <content type="text"><![CDATA[This is the general markdown layout of my Leetcode problem postsProblem namesLink problem description example 1balabalabalaaa example 2balabalabalaaa SolutionIdea balabalabalaaa sublist balabalabalaaa Corner case balabalabalaaa balabalabalaaa balabalabalaaa Code1234public static coid main()&#123; hello world Solution&#125;]]></content>
+      <categories>
+        <category>Leetcode</category>
+      </categories>
+      <tags>
+        <tag>Leetcode</tag>
+        <tag>Algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[The absolute guidance of Tree problems on leetcode]]></title>
     <url>%2F2018%2F12%2F08%2FTree%2F</url>
     <content type="text"><![CDATA[All common and frequently used data structure for Tree problemsTree structureA tree class will look like this:123456public class TreeNode &#123; int val; TreeNode left; TreeNode right; TreeNode(int x) &#123; val = x; &#125;&#125; A tree structure will look like this: Advanced Tree structureSome more advanced tree structure might have more than 2 children, like N-ary Tree, and the tree class will look like this12345public class TreeNode&#123; TreeNode root; List&lt;TreeNode&gt; children; int val;&#125; Question Genres:1.Probe TreeA probe tree question is a kind of question that you need to probe every node of the tree to get the answer. Data structure to solve it BFS (Breadth-first search)BFS is a way to search the tree level by level. In java, we use the Queue data structure. Queue is a FIFO data structure. In a FIFO data structure, the first element added to the queue will be the first one to be removed. Abstract code123456789101112131415161718public void probeTree(TreeNode root)&#123; if(root==null) return; Queue&lt;TreeNode&gt; queue = new LinkedList&lt;&gt;(); queue.offer(root); while(!root.isEmpty())&#123; int size = queue.size();//size remembers the number of nodes that locates at the current level for(int i=0;i&lt;size;i++)&#123; TreeNode node = queue.poll(); // some operations at here if(node.left!=null)&#123; queue.offer(node.left); &#125; if(node.right!=null)&#123; queue.offer(node.right); &#125; &#125; &#125;&#125; DFS (Depth-first search)DFS is a way to probe the whole tree from root to every leaf. The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking. DFS is a FILO data structure. In java we use Stack to do it. Abstract code123456789101112131415public void probeTree(TreeNode root)&#123; if(root==null) return; Stack&lt;TreeNode&gt; stack = new Stack&lt;&gt;(); stack.push(root); while(!stack.isEmpty())&#123; TreeNode node = stack,pop(); //do some operations here if(node.left!=null)&#123; stack.push(node.left); &#125; if(node.right!=null)&#123; stack.push(node.right); &#125; &#125;&#125; RecursionRecursion is a way to probe the tree recursively using one method. For one node, we could treat it as the parent node of its children, and also as the child node of its parent. Hence this node is a parent node and a child node. Therefore, we could treat every node as the parent/root node, then do some operations on its child nodes. Abstract code123456public void probeTree(TreeNode root)&#123; if(root==null) return; //do some operations here probeTree(root.left); probeTree(root.right);&#125; Here are the list of all questions that based on probing a tree 104. Maximum Depth of Binary Tree -Easy]]></content>
@@ -12,18 +24,6 @@
         <tag>Leetcode</tag>
         <tag>Algorithms</tag>
         <tag>Tree</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Leetcode]]></title>
-    <url>%2F2018%2F12%2F08%2FLeetcode%2F</url>
-    <content type="text"><![CDATA[This is the general markdown layout of my Leetcode problem postsProblem namesLink problem description example 1balabalabalaaa example 2balabalabalaaa SolutionIdea balabalabalaaa sublist balabalabalaaa Corner case balabalabalaaa balabalabalaaa balabalabalaaa Code1234public static coid main()&#123; hello world Solution&#125;]]></content>
-      <categories>
-        <category>Leetcode</category>
-      </categories>
-      <tags>
-        <tag>Leetcode</tag>
-        <tag>Algorithms</tag>
       </tags>
   </entry>
 </search>
