@@ -2,6 +2,20 @@
 <search>
   <entry>
     <title><![CDATA[Leetcode]]></title>
+    <url>%2F2018%2F12%2F09%2F104_MaximumDepthofBinaryTree%2F</url>
+    <content type="text"><![CDATA[104. Maximum Depth of Binary TreeLink Given a binary tree, find its maximum depth. The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node. Note: A leaf is a node with no children. Example 1Given binary tree [3,9,20,null,null,15,7],12345 3 / \9 20 / \ 15 7 return its depth = 3. SolutionIdea This is the most common tree probing problem, if you can’t come up with one solution in 5 seconds, then I suggest you first read this post Link first Corner case Tree is null Code BFS 12345678910111213141516171819202122public int maxDepth(TreeNode root) &#123; if(root==null) return 0; int res = 0; Stack&lt;TreeNode&gt; stack = new Stack&lt;&gt;(); Stack&lt;Integer&gt; levels = new Stack&lt;&gt;(); levels.push(1); stack.push(root); while(!stack.isEmpty())&#123; int level = levels.pop(); res = Math.max(res, level); TreeNode node = stack.pop(); if(node.left!=null)&#123; stack.push(node.left); levels.push(level+1); &#125; if(node.right!=null)&#123; stack.push(node.right); levels.push(level+1); &#125; &#125; return res; &#125; DFS 12345678910111213141516public int maxDepth(TreeNode root)&#123; if(root==null) return 0; int res = 0; Queue&lt;TreeNode&gt; queue = new LinkedList&lt;&gt;(); queue.offer(root); while(!queue.isEmpty())&#123; int size = queue.size(); res++; for(int i=0;i&lt;size;i++)&#123; TreeNode node = queue.poll(); if(node.left!=null) queue.offer(node.left); if(node.right!=null) queue.offer(node.right); &#125; &#125; return res;&#125; Recursion 1234public int maxDepth(TreeNode root) &#123; if(root==null) return 0; return 1+ Math.max(maxDepth(root.left),maxDepth(root.right));&#125;]]></content>
+      <categories>
+        <category>Leetcode</category>
+        <category>Tree</category>
+      </categories>
+      <tags>
+        <tag>Leetcode</tag>
+        <tag>Algorithms</tag>
+        <tag>Tree</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Leetcode]]></title>
     <url>%2F2018%2F12%2F08%2FLeetcode%2F</url>
     <content type="text"><![CDATA[This is the general markdown layout of my Leetcode problem postsProblem namesLink problem description example 1balabalabalaaa example 2balabalabalaaa SolutionIdea balabalabalaaa sublist balabalabalaaa Corner case balabalabalaaa balabalabalaaa balabalabalaaa Code1234public static coid main()&#123; hello world Solution&#125;]]></content>
       <categories>
@@ -19,6 +33,7 @@
       <categories>
         <category>Leetcode</category>
         <category>LeetcodeReview</category>
+        <category>Tree</category>
       </categories>
       <tags>
         <tag>Leetcode</tag>
