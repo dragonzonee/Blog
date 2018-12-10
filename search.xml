@@ -7,7 +7,6 @@
       <categories>
         <category>Leetcode</category>
         <category>Dynamic programming</category>
-        <category>Leetcode &gt; Backtracking</category>
       </categories>
       <tags>
         <tag>Leetcode</tag>
@@ -114,7 +113,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Leetcode]]></title>
+    <title><![CDATA[Leetcode Solution Markdown Syntax]]></title>
     <url>%2F2018%2F12%2F08%2FLeetcode%2F</url>
     <content type="text"><![CDATA[This is the general markdown layout of my Leetcode problem postsProblem namesLink problem description example 1balabalabalaaa example 2balabalabalaaa SolutionIdea balabalabalaaa sublist balabalabalaaa Corner case balabalabalaaa balabalabalaaa balabalabalaaa Code1234public static coid main()&#123; hello world Solution&#125;]]></content>
       <categories>
