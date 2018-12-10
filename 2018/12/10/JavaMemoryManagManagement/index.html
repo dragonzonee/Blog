@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="#JVM Understanding Chapter 1: Java Memory Management  Special thanks to jamesdbloom’s blog link.  Java virtual machine for Java SE 7 Edition is made up with the following components Tread independent">
+<meta name="description" content="JVM Understanding Chapter 1: Java Memory Management Special thanks to jamesdbloom’s blog linkAnother reference linkAnother reference for heap allocate policy  Java virtual machine for Java SE 7 Editio">
 <meta name="keywords" content="Java,JVM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaMemoryManagManagement">
+<meta property="og:title" content="Java Memory Management">
 <meta property="og:url" content="http://yoursite.com/2018/12/10/JavaMemoryManagManagement/index.html">
 <meta property="og:site_name" content="Dragonzonee&#39;s Blog">
-<meta property="og:description" content="#JVM Understanding Chapter 1: Java Memory Management  Special thanks to jamesdbloom’s blog link.  Java virtual machine for Java SE 7 Edition is made up with the following components Tread independent">
+<meta property="og:description" content="JVM Understanding Chapter 1: Java Memory Management Special thanks to jamesdbloom’s blog linkAnother reference linkAnother reference for heap allocate policy  Java virtual machine for Java SE 7 Editio">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://lh3.googleusercontent.com/BGVnGR3rqyh8bxmJRtNkeKVA5if61i6YZd_m-Udm3cXXq6mzJjPSiay8G3JeioXRhb3c-a4jOE0wCZMoAVeXLm8kuc4f4DwqUOsbitbXHjGD5-54NZv_vZkWSXClPJ6Q2HwJKyRCvKMFP1bMTaxx5qklZUt0UzC2AmsPuFNUBGNp_YWEwsf7S3bFcS-aR8wOh8Od1-TzfjYts9PwPfOag_dth7qxphkf_wjN2G1ts-0u6gY1vQpx9FyR4Fz_G_lYlYp9BUA8lqGRVgLjjl-BfvJ08EtpMj1O2rvlcT2YDx4vbQnaWt0JALx2LeDxHZwO16hcBjJcXiqAlWknPM9HcxG9iDJY8xiLZeq2PR27W-GzSinea3vsD6cjaYJbUjfYbE9XuzUVtTLrRJKy7UsoyCr_-CdB-j1S3mLUZUHxf9yRJYf3ZDSiGGgDqpRxo8sFqmfDvxrnPuOjqIoLHRXZJt3nypBCNyOWNpzemwBT2VRT_fwHaLWkU-uy-xFXaILFCW2mfDNGq59n3lciEVJTDSkIGQ6rS9GKLeBAHvxx9m5eM3l8Bcub8qd0ZMR8fYI-IErCNZBKB5GTlxk4Tcp85cEwB0Ked2OYpt59TU2AhprZGSMk0YkRnMa1O5WjfXywkHNyNXR0XoUrF0PiY7gLeoo=w1215-h721-no">
-<meta property="og:updated_time" content="2018-12-10T08:47:02.085Z">
+<meta property="og:updated_time" content="2018-12-10T09:04:04.977Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaMemoryManagManagement">
-<meta name="twitter:description" content="#JVM Understanding Chapter 1: Java Memory Management  Special thanks to jamesdbloom’s blog link.  Java virtual machine for Java SE 7 Edition is made up with the following components Tread independent">
+<meta name="twitter:title" content="Java Memory Management">
+<meta name="twitter:description" content="JVM Understanding Chapter 1: Java Memory Management Special thanks to jamesdbloom’s blog linkAnother reference linkAnother reference for heap allocate policy  Java virtual machine for Java SE 7 Editio">
 <meta name="twitter:image" content="https://lh3.googleusercontent.com/BGVnGR3rqyh8bxmJRtNkeKVA5if61i6YZd_m-Udm3cXXq6mzJjPSiay8G3JeioXRhb3c-a4jOE0wCZMoAVeXLm8kuc4f4DwqUOsbitbXHjGD5-54NZv_vZkWSXClPJ6Q2HwJKyRCvKMFP1bMTaxx5qklZUt0UzC2AmsPuFNUBGNp_YWEwsf7S3bFcS-aR8wOh8Od1-TzfjYts9PwPfOag_dth7qxphkf_wjN2G1ts-0u6gY1vQpx9FyR4Fz_G_lYlYp9BUA8lqGRVgLjjl-BfvJ08EtpMj1O2rvlcT2YDx4vbQnaWt0JALx2LeDxHZwO16hcBjJcXiqAlWknPM9HcxG9iDJY8xiLZeq2PR27W-GzSinea3vsD6cjaYJbUjfYbE9XuzUVtTLrRJKy7UsoyCr_-CdB-j1S3mLUZUHxf9yRJYf3ZDSiGGgDqpRxo8sFqmfDvxrnPuOjqIoLHRXZJt3nypBCNyOWNpzemwBT2VRT_fwHaLWkU-uy-xFXaILFCW2mfDNGq59n3lciEVJTDSkIGQ6rS9GKLeBAHvxx9m5eM3l8Bcub8qd0ZMR8fYI-IErCNZBKB5GTlxk4Tcp85cEwB0Ked2OYpt59TU2AhprZGSMk0YkRnMa1O5WjfXywkHNyNXR0XoUrF0PiY7gLeoo=w1215-h721-no">
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <title>JavaMemoryManagManagement | Dragonzonee's Blog</title>
+  <title>Java Memory Management | Dragonzonee's Blog</title>
   
 
 
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JavaMemoryManagManagement</h1>
+          <h1 class="post-title" itemprop="name headline">Java Memory Management</h1>
         
 
         <div class="post-meta">
@@ -397,9 +397,8 @@
       
 
       
-        <p>#JVM Understanding Chapter 1: Java Memory Management</p>
-<blockquote>
-<p>Special thanks to jamesdbloom’s blog <a href="http://blog.jamesdbloom.com/JVMInternals.html#jvm_system_threads" target="_blank" rel="noopener">link</a>.</p>
+        <h1 id="JVM-Understanding-Chapter-1-Java-Memory-Management"><a href="#JVM-Understanding-Chapter-1-Java-Memory-Management" class="headerlink" title="JVM Understanding Chapter 1: Java Memory Management"></a>JVM Understanding Chapter 1: Java Memory Management</h1><blockquote>
+<p>Special thanks to jamesdbloom’s blog <a href="http://blog.jamesdbloom.com/JVMInternals.html#jvm_system_threads" target="_blank" rel="noopener">link</a><br><a href="https://dzone.com/articles/java-memory-management" target="_blank" rel="noopener">Another reference link</a><br><a href="https://www.journaldev.com/2856/java-jvm-memory-model-memory-management-in-java" target="_blank" rel="noopener">Another reference for heap allocate policy</a></p>
 </blockquote>
 <p>Java virtual machine for Java SE 7 Edition is made up with the following components<br><img src="https://lh3.googleusercontent.com/BGVnGR3rqyh8bxmJRtNkeKVA5if61i6YZd_m-Udm3cXXq6mzJjPSiay8G3JeioXRhb3c-a4jOE0wCZMoAVeXLm8kuc4f4DwqUOsbitbXHjGD5-54NZv_vZkWSXClPJ6Q2HwJKyRCvKMFP1bMTaxx5qklZUt0UzC2AmsPuFNUBGNp_YWEwsf7S3bFcS-aR8wOh8Od1-TzfjYts9PwPfOag_dth7qxphkf_wjN2G1ts-0u6gY1vQpx9FyR4Fz_G_lYlYp9BUA8lqGRVgLjjl-BfvJ08EtpMj1O2rvlcT2YDx4vbQnaWt0JALx2LeDxHZwO16hcBjJcXiqAlWknPM9HcxG9iDJY8xiLZeq2PR27W-GzSinea3vsD6cjaYJbUjfYbE9XuzUVtTLrRJKy7UsoyCr_-CdB-j1S3mLUZUHxf9yRJYf3ZDSiGGgDqpRxo8sFqmfDvxrnPuOjqIoLHRXZJt3nypBCNyOWNpzemwBT2VRT_fwHaLWkU-uy-xFXaILFCW2mfDNGq59n3lciEVJTDSkIGQ6rS9GKLeBAHvxx9m5eM3l8Bcub8qd0ZMR8fYI-IErCNZBKB5GTlxk4Tcp85cEwB0Ked2OYpt59TU2AhprZGSMk0YkRnMa1O5WjfXywkHNyNXR0XoUrF0PiY7gLeoo=w1215-h721-no" alt="img"></p>
 <h3 id="Tread-independent-components"><a href="#Tread-independent-components" class="headerlink" title="Tread independent components:"></a>Tread independent components:</h3><ul>
@@ -665,7 +664,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tread-independent-components"><span class="nav-number">1.</span> <span class="nav-text">Tread independent components:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shared-components-Between-Threads"><span class="nav-number">2.</span> <span class="nav-text">Shared components Between Threads:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Explanation-of-each-components"><span class="nav-number">3.</span> <span class="nav-text">Explanation of each components</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Program-Counter-PC"><span class="nav-number">3.1.</span> <span class="nav-text">Program Counter (PC)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Stack"><span class="nav-number">3.2.</span> <span class="nav-text">Stack</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Native-Stack"><span class="nav-number">3.3.</span> <span class="nav-text">Native Stack</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Heap"><span class="nav-number">3.4.</span> <span class="nav-text">Heap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Non-Heap-Memory"><span class="nav-number">3.5.</span> <span class="nav-text">Non-Heap Memory</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Method-Area"><span class="nav-number">3.6.</span> <span class="nav-text">Method Area</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JVM-Understanding-Chapter-1-Java-Memory-Management"><span class="nav-number">1.</span> <span class="nav-text">JVM Understanding Chapter 1: Java Memory Management</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tread-independent-components"><span class="nav-number">1.0.1.</span> <span class="nav-text">Tread independent components:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shared-components-Between-Threads"><span class="nav-number">1.0.2.</span> <span class="nav-text">Shared components Between Threads:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Explanation-of-each-components"><span class="nav-number">1.0.3.</span> <span class="nav-text">Explanation of each components</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Program-Counter-PC"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">Program Counter (PC)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Stack"><span class="nav-number">1.0.3.2.</span> <span class="nav-text">Stack</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Native-Stack"><span class="nav-number">1.0.3.3.</span> <span class="nav-text">Native Stack</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Heap"><span class="nav-number">1.0.3.4.</span> <span class="nav-text">Heap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Non-Heap-Memory"><span class="nav-number">1.0.3.5.</span> <span class="nav-text">Non-Heap Memory</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Method-Area"><span class="nav-number">1.0.3.6.</span> <span class="nav-text">Method Area</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
