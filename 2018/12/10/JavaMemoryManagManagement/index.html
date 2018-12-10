@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Leetcode,Algorithms,Dynamic programming,">
+  <meta name="keywords" content="Java,JVM,">
 
 
 
@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="96. Unique Binary Search TreesLeetcode Link Given n, how many structurally unique BST’s (binary search trees) that store values 1 … n? Example:  Input: 3Output: 5Explanation:Given n = 3, there are a t">
-<meta name="keywords" content="Leetcode,Algorithms,Dynamic programming">
+<meta name="description" content="#JVM Understanding Chapter 1: Java Memory Management  Special thanks to jamesdbloom’s blog link.  Java virtual machine for Java SE 7 Edition is made up with the following components Tread independent">
+<meta name="keywords" content="Java,JVM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="96. Unique Binary Search Trees">
-<meta property="og:url" content="http://yoursite.com/2018/12/09/96-UniqueBinarySearchTrees/index.html">
+<meta property="og:title" content="JavaMemoryManagManagement">
+<meta property="og:url" content="http://yoursite.com/2018/12/10/JavaMemoryManagManagement/index.html">
 <meta property="og:site_name" content="Dragonzonee&#39;s Blog">
-<meta property="og:description" content="96. Unique Binary Search TreesLeetcode Link Given n, how many structurally unique BST’s (binary search trees) that store values 1 … n? Example:  Input: 3Output: 5Explanation:Given n = 3, there are a t">
+<meta property="og:description" content="#JVM Understanding Chapter 1: Java Memory Management  Special thanks to jamesdbloom’s blog link.  Java virtual machine for Java SE 7 Edition is made up with the following components Tread independent">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-10T02:37:55.352Z">
+<meta property="og:image" content="https://lh3.googleusercontent.com/BGVnGR3rqyh8bxmJRtNkeKVA5if61i6YZd_m-Udm3cXXq6mzJjPSiay8G3JeioXRhb3c-a4jOE0wCZMoAVeXLm8kuc4f4DwqUOsbitbXHjGD5-54NZv_vZkWSXClPJ6Q2HwJKyRCvKMFP1bMTaxx5qklZUt0UzC2AmsPuFNUBGNp_YWEwsf7S3bFcS-aR8wOh8Od1-TzfjYts9PwPfOag_dth7qxphkf_wjN2G1ts-0u6gY1vQpx9FyR4Fz_G_lYlYp9BUA8lqGRVgLjjl-BfvJ08EtpMj1O2rvlcT2YDx4vbQnaWt0JALx2LeDxHZwO16hcBjJcXiqAlWknPM9HcxG9iDJY8xiLZeq2PR27W-GzSinea3vsD6cjaYJbUjfYbE9XuzUVtTLrRJKy7UsoyCr_-CdB-j1S3mLUZUHxf9yRJYf3ZDSiGGgDqpRxo8sFqmfDvxrnPuOjqIoLHRXZJt3nypBCNyOWNpzemwBT2VRT_fwHaLWkU-uy-xFXaILFCW2mfDNGq59n3lciEVJTDSkIGQ6rS9GKLeBAHvxx9m5eM3l8Bcub8qd0ZMR8fYI-IErCNZBKB5GTlxk4Tcp85cEwB0Ked2OYpt59TU2AhprZGSMk0YkRnMa1O5WjfXywkHNyNXR0XoUrF0PiY7gLeoo=w1215-h721-no">
+<meta property="og:updated_time" content="2018-12-10T08:47:02.085Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="96. Unique Binary Search Trees">
-<meta name="twitter:description" content="96. Unique Binary Search TreesLeetcode Link Given n, how many structurally unique BST’s (binary search trees) that store values 1 … n? Example:  Input: 3Output: 5Explanation:Given n = 3, there are a t">
+<meta name="twitter:title" content="JavaMemoryManagManagement">
+<meta name="twitter:description" content="#JVM Understanding Chapter 1: Java Memory Management  Special thanks to jamesdbloom’s blog link.  Java virtual machine for Java SE 7 Edition is made up with the following components Tread independent">
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/BGVnGR3rqyh8bxmJRtNkeKVA5if61i6YZd_m-Udm3cXXq6mzJjPSiay8G3JeioXRhb3c-a4jOE0wCZMoAVeXLm8kuc4f4DwqUOsbitbXHjGD5-54NZv_vZkWSXClPJ6Q2HwJKyRCvKMFP1bMTaxx5qklZUt0UzC2AmsPuFNUBGNp_YWEwsf7S3bFcS-aR8wOh8Od1-TzfjYts9PwPfOag_dth7qxphkf_wjN2G1ts-0u6gY1vQpx9FyR4Fz_G_lYlYp9BUA8lqGRVgLjjl-BfvJ08EtpMj1O2rvlcT2YDx4vbQnaWt0JALx2LeDxHZwO16hcBjJcXiqAlWknPM9HcxG9iDJY8xiLZeq2PR27W-GzSinea3vsD6cjaYJbUjfYbE9XuzUVtTLrRJKy7UsoyCr_-CdB-j1S3mLUZUHxf9yRJYf3ZDSiGGgDqpRxo8sFqmfDvxrnPuOjqIoLHRXZJt3nypBCNyOWNpzemwBT2VRT_fwHaLWkU-uy-xFXaILFCW2mfDNGq59n3lciEVJTDSkIGQ6rS9GKLeBAHvxx9m5eM3l8Bcub8qd0ZMR8fYI-IErCNZBKB5GTlxk4Tcp85cEwB0Ked2OYpt59TU2AhprZGSMk0YkRnMa1O5WjfXywkHNyNXR0XoUrF0PiY7gLeoo=w1215-h721-no">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/09/96-UniqueBinarySearchTrees/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/10/JavaMemoryManagManagement/">
 
 
 
 
 
-  <title>96. Unique Binary Search Trees | Dragonzonee's Blog</title>
+  <title>JavaMemoryManagManagement | Dragonzonee's Blog</title>
   
 
 
@@ -295,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/09/96-UniqueBinarySearchTrees/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/10/JavaMemoryManagManagement/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="dragonzonee">
@@ -312,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">96. Unique Binary Search Trees</h1>
+          <h1 class="post-title" itemprop="name headline">JavaMemoryManagManagement</h1>
         
 
         <div class="post-meta">
@@ -324,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-09T18:03:02-08:00">
-                2018-12-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-10T00:15:18-08:00">
+                2018-12-10
               </time>
             
 
@@ -347,8 +349,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">Leetcode</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -358,8 +360,8 @@
                 
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/Dynamic-programming/" itemprop="url" rel="index">
-                    <span itemprop="name">Dynamic programming</span>
+                  <a href="/categories/Java/JVM/" itemprop="url" rel="index">
+                    <span itemprop="name">JVM</span>
                   </a>
                 </span>
 
@@ -395,44 +397,102 @@
       
 
       
-        <h2 id="96-Unique-Binary-Search-Trees"><a href="#96-Unique-Binary-Search-Trees" class="headerlink" title="96. Unique Binary Search Trees"></a>96. Unique Binary Search Trees</h2><p><a href="https://leetcode.com/problems/unique-binary-search-trees/description/" target="_blank" rel="noopener">Leetcode Link</a></p>
-<p>Given n, how many structurally unique BST’s (binary search trees) that store values 1 … n?</p>
-<p><strong>Example:</strong></p>
+        <p>#JVM Understanding Chapter 1: Java Memory Management</p>
 <blockquote>
-<p>Input: 3<br>Output: 5<br>Explanation:<br>Given n = 3, there are a total of 5 unique BST’s:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1         3     3      2      1</span><br><span class="line"> \       /     /      / \      \</span><br><span class="line">  3     2     1      1   3      2</span><br><span class="line"> /     /       \                 \</span><br><span class="line">2     1         2                 3</span><br></pre></td></tr></table></figure></p>
+<p>Special thanks to jamesdbloom’s blog <a href="http://blog.jamesdbloom.com/JVMInternals.html#jvm_system_threads" target="_blank" rel="noopener">link</a>.</p>
 </blockquote>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><h4 id="Idea"><a href="#Idea" class="headerlink" title="Idea"></a>Idea</h4><ul>
-<li>At the first glance it might seem to a Tree related problem, but it’s actually a dynamic programming problem.</li>
-<li>Well, how can we come up with a solution? We first want to make sure that it’s not a tree related problem. We don’t even have a valid TreeNode input. All we know is just an input number and a BST tree structure. Em… It’s definitely no need to construct these trees by myself. when facing this situation, write down some specific examples are usually helpful.</li>
-<li><p>when n = 1</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>when n = 2</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">  10</span><br><span class="line"> /</span><br><span class="line">5</span><br><span class="line"></span><br><span class="line">or</span><br><span class="line"></span><br><span class="line">5</span><br><span class="line"> \</span><br><span class="line">  10</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>when n = 3</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">10         999     999    10     5</span><br><span class="line"> \         /      /      / \      \</span><br><span class="line">  999     10     5      5   999    10</span><br><span class="line"> /       /       \                  \</span><br><span class="line">5       5         10                 999</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>we first could notice that these values are not important, they could be any value as long as the tree is a valid BST</p>
-</li>
-<li>If we see further in detail we could notice that we do have some familiar schema in n = 3: That is we do have several following structure when n = 3<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">5       10</span><br><span class="line"> \     /</span><br><span class="line"> 10   5</span><br></pre></td></tr></table></figure>
-</li>
+<p>Java virtual machine for Java SE 7 Edition is made up with the following components<br><img src="https://lh3.googleusercontent.com/BGVnGR3rqyh8bxmJRtNkeKVA5if61i6YZd_m-Udm3cXXq6mzJjPSiay8G3JeioXRhb3c-a4jOE0wCZMoAVeXLm8kuc4f4DwqUOsbitbXHjGD5-54NZv_vZkWSXClPJ6Q2HwJKyRCvKMFP1bMTaxx5qklZUt0UzC2AmsPuFNUBGNp_YWEwsf7S3bFcS-aR8wOh8Od1-TzfjYts9PwPfOag_dth7qxphkf_wjN2G1ts-0u6gY1vQpx9FyR4Fz_G_lYlYp9BUA8lqGRVgLjjl-BfvJ08EtpMj1O2rvlcT2YDx4vbQnaWt0JALx2LeDxHZwO16hcBjJcXiqAlWknPM9HcxG9iDJY8xiLZeq2PR27W-GzSinea3vsD6cjaYJbUjfYbE9XuzUVtTLrRJKy7UsoyCr_-CdB-j1S3mLUZUHxf9yRJYf3ZDSiGGgDqpRxo8sFqmfDvxrnPuOjqIoLHRXZJt3nypBCNyOWNpzemwBT2VRT_fwHaLWkU-uy-xFXaILFCW2mfDNGq59n3lciEVJTDSkIGQ6rS9GKLeBAHvxx9m5eM3l8Bcub8qd0ZMR8fYI-IErCNZBKB5GTlxk4Tcp85cEwB0Ked2OYpt59TU2AhprZGSMk0YkRnMa1O5WjfXywkHNyNXR0XoUrF0PiY7gLeoo=w1215-h721-no" alt="img"></p>
+<h3 id="Tread-independent-components"><a href="#Tread-independent-components" class="headerlink" title="Tread independent components:"></a>Tread independent components:</h3><ul>
+<li>Program Counter</li>
+<li>VM stack</li>
+<li>Native stack</li>
 </ul>
-<p>That is, the schema of n=2 could be used to n = 3</p>
+<h3 id="Shared-components-Between-Threads"><a href="#Shared-components-Between-Threads" class="headerlink" title="Shared components Between Threads:"></a>Shared components Between Threads:</h3><ul>
+<li>Heap</li>
+<li>Method Area</li>
+<li>Non-Heap Memory</li>
+</ul>
+<h3 id="Explanation-of-each-components"><a href="#Explanation-of-each-components" class="headerlink" title="Explanation of each components"></a>Explanation of each components</h3><h4 id="Program-Counter-PC"><a href="#Program-Counter-PC" class="headerlink" title="Program Counter (PC)"></a>Program Counter (PC)</h4><p>Address of the current instruction (or opcode) unless it is native. If the current method is native then the PC is undefined. All CPUs have a PC, typically the PC is incremented after each instruction and therefore holds the address of the next instruction to be executed. The JVM uses the PC to keep track of where it is executing instructions, the PC will in fact be pointing at a memory address in the Method Area.<br>当前线程所执行的字节码的行号指示器，用于完成分支、循环、跳转等操作，线程独立</p>
+<h4 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h4><p>Each thread has its own stack that holds a frame for each method executing on that thread. The stack is a Last In First Out (LIFO) data structure, so the currently executing method is at the top of the stack. A new frame is created and added (pushed) to the top of stack for every method invocation. The frame is removed (popped) when the method returns normally or if an uncaught exception is thrown during the method invocation.</p>
+<p>In the stack, there is a local variable array. The array of local variables contains all the variables used during the execution of the method, including a reference to this, all method parameters and other locally defined variables. For class methods (i.e. static methods) the method parameters start from zero, however, for instance method the zero slot is reserved for this.</p>
+<p>A local variable can be:</p>
 <ul>
-<li>Now, if we abstract 999 as X, we could have the following situations:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">X      X                X               X      X</span><br><span class="line"> \      \              / \             /      /</span><br><span class="line">  10     5            5   10          10     5</span><br><span class="line"> /        \                          /        \</span><br><span class="line">5          10                       5          10</span><br></pre></td></tr></table></figure>
+<li>boolean</li>
+<li>byte</li>
+<li>char</li>
+<li>long</li>
+<li>short</li>
+<li>int</li>
+<li>float</li>
+<li>double</li>
+<li>reference</li>
+<li>returnAddress</li>
+</ul>
+<h4 id="Native-Stack"><a href="#Native-Stack" class="headerlink" title="Native Stack"></a>Native Stack</h4><p>Not all JVMs support native methods, however, those that do typically create a per thread native method stack. If a JVM has been implemented using a C-linkage model for Java Native Invocation (JNI) then the native stack will be a C stack. In this case the order of arguments and return value will be identical in the native stack to typical C program. A native method can typically (depending on the JVM implementation) call back into the JVM and invoke a Java method. Such a native to Java invocation will occur on the stack (normal Java stack); the thread will leave the native stack and create a new frame on the stack (normal Java stack).</p>
+<h4 id="Heap"><a href="#Heap" class="headerlink" title="Heap"></a>Heap</h4><p>The Heap is used to allocate class instances and arrays at runtime. Arrays and objects can never be stored on the stack because a frame is not designed to change in size after it has been created. The frame only stores references that point to objects or arrays on the heap. Unlike primitive variables and references in the local variable array (in each frame) objects are always stored on the heap so they are not removed when a method ends. Instead objects are only removed by the garbage collector.</p>
+<p>To support garbage collection the heap is divided into three sections:</p>
+<ul>
+<li>Young Generation<ul>
+<li>Often split between Eden and Survivor</li>
+</ul>
+</li>
+<li>Old Generation (also called Tenured Generation)</li>
+<li>Permanent Generation</li>
+</ul>
+<h4 id="Non-Heap-Memory"><a href="#Non-Heap-Memory" class="headerlink" title="Non-Heap Memory"></a>Non-Heap Memory</h4><p>Objects that are logically considered as part of the JVM mechanics are not created on the Heap.</p>
+<p>The non-heap memory includes:</p>
+<ul>
+<li>Permanent Generation that contains<ul>
+<li>the method area</li>
+<li>interned strings</li>
+</ul>
+</li>
+<li>Code Cache used for compilation and storage of methods that have been compiled to native code by the JIT compiler</li>
+</ul>
+<h4 id="Method-Area"><a href="#Method-Area" class="headerlink" title="Method Area"></a>Method Area</h4><p>The method area stores per-class information such as:</p>
+<ul>
+<li>Classloader Reference</li>
+<li>Run Time Constant Pool<ul>
+<li>Numeric constants</li>
+<li>Field references</li>
+<li>Method References</li>
+<li>Attributes</li>
+</ul>
+</li>
+<li>Field data<ul>
+<li>Per field</li>
+<li>Name</li>
+<li>Type</li>
+<li>Modifiers</li>
+<li>Attributes</li>
+</ul>
+</li>
+<li>Method data<ul>
+<li>Per method</li>
+<li>Name</li>
+<li>Return Type</li>
+<li>Parameter Types (in order)</li>
+<li>Modifiers</li>
+<li>Attributes</li>
+</ul>
+</li>
+<li>Method code<ul>
+<li>Per method</li>
+<li>Bytecodes</li>
+<li>Operand stack size</li>
+<li>Local variable size</li>
+<li>Local variable table</li>
+<li>Exception table<ul>
+<li>Per exception handler</li>
+<li>Start point</li>
+<li>End point</li>
+<li>PC offset for handler code</li>
+<li>Constant pool index for exception class being caught</li>
+</ul>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">     X                  X                X</span><br><span class="line">    / \                / \              / \</span><br><span class="line">  0LN 2RN            1LN 1RN          2LN 0LN</span><br><span class="line"></span><br><span class="line">LN: left nodes. 0LN means 0 left nodes</span><br><span class="line">RN: right nodes. 2RN means 2 right nodes.</span><br></pre></td></tr></table></figure>
-<p>At the 2RN or 2LN scenario, we already know that we have 2 possible result<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">5       10</span><br><span class="line"> \     /</span><br><span class="line"> 10   5</span><br></pre></td></tr></table></figure></p>
-<p>At the 1RN or 1LN scenario, we already know that we have 1 possible result<br>Then what we need to do is add up all these together then we could get the answer of 3LN and 3RN. So on so forth until we get n nodes</p>
-<h4 id="Corner-case"><a href="#Corner-case" class="headerlink" title="Corner case"></a>Corner case</h4><ul>
-<li>DP[0] = 1 — initial state of this dp solution</li>
-</ul>
-<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><ol>
-<li>DP<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numTrees</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n&lt;=<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span>[] src = <span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>];</span><br><span class="line">    src[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    src[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=i-<span class="number">1</span>;j++)&#123;</span><br><span class="line">            <span class="comment">//src[2] = src[0]*src[1] + src[1]*src[0]</span></span><br><span class="line">            src[i] += src[j]*src[i-j-<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> src[n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
+</ul>
 
       
     </div>
@@ -450,11 +510,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Leetcode/" rel="tag"># Leetcode</a>
+            <a href="/tags/Java/" rel="tag"># Java</a>
           
-            <a href="/tags/Algorithms/" rel="tag"># Algorithms</a>
-          
-            <a href="/tags/Dynamic-programming/" rel="tag"># Dynamic programming</a>
+            <a href="/tags/JVM/" rel="tag"># JVM</a>
           
         </div>
       
@@ -467,8 +525,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/09/173-BinarySearchTreeIterator/" rel="next" title="173. Binary Search Tree Iterator">
-                <i class="fa fa-chevron-left"></i> 173. Binary Search Tree Iterator
+              <a href="/2018/12/09/100-SameTree/" rel="next" title="100. Same Tree">
+                <i class="fa fa-chevron-left"></i> 100. Same Tree
               </a>
             
           </div>
@@ -476,10 +534,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/09/100-SameTree/" rel="prev" title="100. Same Tree">
-                100. Same Tree <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -611,7 +665,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#96-Unique-Binary-Search-Trees"><span class="nav-number">1.</span> <span class="nav-text">96. Unique Binary Search Trees</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Idea"><span class="nav-number">2.0.1.</span> <span class="nav-text">Idea</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Corner-case"><span class="nav-number">2.0.2.</span> <span class="nav-text">Corner case</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number">2.0.3.</span> <span class="nav-text">Code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tread-independent-components"><span class="nav-number">1.</span> <span class="nav-text">Tread independent components:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shared-components-Between-Threads"><span class="nav-number">2.</span> <span class="nav-text">Shared components Between Threads:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Explanation-of-each-components"><span class="nav-number">3.</span> <span class="nav-text">Explanation of each components</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Program-Counter-PC"><span class="nav-number">3.1.</span> <span class="nav-text">Program Counter (PC)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Stack"><span class="nav-number">3.2.</span> <span class="nav-text">Stack</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Native-Stack"><span class="nav-number">3.3.</span> <span class="nav-text">Native Stack</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Heap"><span class="nav-number">3.4.</span> <span class="nav-text">Heap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Non-Heap-Memory"><span class="nav-number">3.5.</span> <span class="nav-text">Non-Heap Memory</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Method-Area"><span class="nav-number">3.6.</span> <span class="nav-text">Method Area</span></a></li></ol></li></ol></div>
             
 
           </div>
