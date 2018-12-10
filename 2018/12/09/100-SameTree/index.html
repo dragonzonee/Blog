@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="173. Binary Search Tree IteratorLink Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST. Calling next() will return the next smallest">
+<meta name="description" content="100. Same TreeLink Given two binary trees, write a function to check if they are the same or not. Two binary trees are considered the same if they are structurally identical and the nodes have the sam">
 <meta name="keywords" content="Leetcode,Algorithms,Tree">
 <meta property="og:type" content="article">
-<meta property="og:title" content="173. Binary Search Tree Iterator">
-<meta property="og:url" content="http://yoursite.com/2018/12/09/173-BinarySearchTreeIterator/index.html">
+<meta property="og:title" content="100. Same Tree">
+<meta property="og:url" content="http://yoursite.com/2018/12/09/100-SameTree/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="173. Binary Search Tree IteratorLink Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST. Calling next() will return the next smallest">
+<meta property="og:description" content="100. Same TreeLink Given two binary trees, write a function to check if they are the same or not. Two binary trees are considered the same if they are structurally identical and the nodes have the sam">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-10T02:00:42.481Z">
+<meta property="og:updated_time" content="2018-12-10T02:50:19.116Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="173. Binary Search Tree Iterator">
-<meta name="twitter:description" content="173. Binary Search Tree IteratorLink Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST. Calling next() will return the next smallest">
+<meta name="twitter:title" content="100. Same Tree">
+<meta name="twitter:description" content="100. Same TreeLink Given two binary trees, write a function to check if they are the same or not. Two binary trees are considered the same if they are structurally identical and the nodes have the sam">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/09/173-BinarySearchTreeIterator/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/09/100-SameTree/">
 
 
 
 
 
-  <title>173. Binary Search Tree Iterator | Blog</title>
+  <title>100. Same Tree | Blog</title>
   
 
 
@@ -295,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/09/173-BinarySearchTreeIterator/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/09/100-SameTree/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="dragonzonee">
@@ -312,7 +312,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">173. Binary Search Tree Iterator</h1>
+          <h1 class="post-title" itemprop="name headline">100. Same Tree</h1>
         
 
         <div class="post-meta">
@@ -324,7 +324,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-09T17:52:36-08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-09T18:44:19-08:00">
                 2018-12-09
               </time>
             
@@ -395,19 +395,29 @@
       
 
       
-        <h2 id="173-Binary-Search-Tree-Iterator"><a href="#173-Binary-Search-Tree-Iterator" class="headerlink" title="173. Binary Search Tree Iterator"></a>173. Binary Search Tree Iterator</h2><p><a href="https://leetcode.com/problems/binary-search-tree-iterator/description/" target="_blank" rel="noopener">Link</a></p>
-<p>Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST.</p>
-<p>Calling next() will return the next smallest number in the BST.</p>
-<p>Note: <strong>next()</strong> and <strong>hasNext()</strong> should run in average O(1) time and uses O(h) memory, where h is the height of the tree.</p>
+        <h2 id="100-Same-Tree"><a href="#100-Same-Tree" class="headerlink" title="100. Same Tree"></a>100. Same Tree</h2><p><a href="https://leetcode.com/problemset/all/" target="_blank" rel="noopener">Link</a></p>
+<p>Given two binary trees, write a function to check if they are the same or not.</p>
+<p>Two binary trees are considered the same if they are structurally identical and the nodes have the same value.</p>
+<p>Example 1:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input:     1         1</span><br><span class="line">          / \       / \</span><br><span class="line">         2   3     2   3</span><br><span class="line"></span><br><span class="line">        [1,2,3],   [1,2,3]</span><br><span class="line"></span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure></p>
+<p>Example 2:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input:     1         1</span><br><span class="line">          /           \</span><br><span class="line">         2             2</span><br><span class="line"></span><br><span class="line">        [1,2],     [1,null,2]</span><br><span class="line"></span><br><span class="line">Output: false</span><br></pre></td></tr></table></figure></p>
+<p>Example 3:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input:     1         1</span><br><span class="line">          / \       / \</span><br><span class="line">         2   1     1   2</span><br><span class="line"></span><br><span class="line">        [1,2,1],   [1,1,2]</span><br><span class="line"></span><br><span class="line">Output: false</span><br></pre></td></tr></table></figure></p>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><h4 id="Idea"><a href="#Idea" class="headerlink" title="Idea"></a>Idea</h4><ul>
-<li>This is a typical problem of using pre-order traversal method to solve it. If it’s your first time hearing about pre-order traversal, I suggest you read this post <a href="https://dragonzonee.github.io/2018/12/08/Tree/" target="_blank" rel="noopener">Link</a> first</li>
+<li>An easy probe tree problem, just probe every node and check if the values are equal or null</li>
 </ul>
-<p>Basically we need to use a stack to save node’s values and do a pre-order traversal to the BST. At each next() operation, we pop out the smallest value and push the current smallest value into the stack again.</p>
-<p>There is a common schema to do a pre-order traversal, I will just write the code.</p>
 <h4 id="Corner-case"><a href="#Corner-case" class="headerlink" title="Corner case"></a>Corner case</h4><ul>
 <li>Tree is null</li>
+<li>Don’t forget to consider the following situation<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  2      2</span><br><span class="line"> / \    / \</span><br><span class="line">7   9  7   9</span><br><span class="line">            \</span><br><span class="line">            10</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BSTIterator</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> TreeNode root;</span><br><span class="line">    <span class="keyword">private</span> Stack&lt;TreeNode&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">BSTIterator</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.root = root;</span><br><span class="line">        <span class="keyword">while</span>(root!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            stack.push(root);</span><br><span class="line">            root = root.left;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** <span class="doctag">@return</span> whether we have a next smallest number */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasNext</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> !stack.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** <span class="doctag">@return</span> the next smallest number */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">next</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        TreeNode temNode = stack.pop();</span><br><span class="line">        <span class="keyword">int</span> res = temNode.val;</span><br><span class="line">        temNode = temNode.right;</span><br><span class="line">        <span class="keyword">while</span>(temNode!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            stack.push(temNode);</span><br><span class="line">            temNode = temNode.left;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">     2      2</span><br><span class="line">    / \    / \</span><br><span class="line">   7   9  7   9</span><br><span class="line">  /        \</span><br><span class="line">10          10</span><br></pre></td></tr></table></figure>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><ol>
+<li><p>DFS</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSameTree</span><span class="params">(TreeNode p, TreeNode q)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(p==<span class="keyword">null</span>&amp;&amp;q==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    <span class="keyword">if</span>(p==<span class="keyword">null</span>||q==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    Stack&lt;TreeNode&gt; stack1 = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">    stack1.push(p);</span><br><span class="line">    Stack&lt;TreeNode&gt; stack2 = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">    stack2.push(q);</span><br><span class="line">    <span class="keyword">while</span>(!stack1.isEmpty()&amp;&amp;!stack2.isEmpty())&#123;</span><br><span class="line">        TreeNode node1 = stack1.pop();</span><br><span class="line">        TreeNode node2 = stack2.pop();</span><br><span class="line">        <span class="keyword">if</span>(node1==<span class="keyword">null</span>&amp;&amp;node2==<span class="keyword">null</span>) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(node1==<span class="keyword">null</span>||node2==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(node1.val!=node2.val) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            stack1.push(node1.left);</span><br><span class="line">            stack1.push(node1.right);</span><br><span class="line">            stack2.push(node2.left);</span><br><span class="line">            stack2.push(node2.right);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Recursion</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSameTree</span><span class="params">(TreeNode p, TreeNode q)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(p==<span class="keyword">null</span>&amp;&amp;q==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    <span class="keyword">if</span>(p==<span class="keyword">null</span>||q==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    <span class="keyword">if</span>(p.val==q.val) <span class="keyword">return</span> isSameTree(p.left,q.left)&amp;&amp;isSameTree(p.right,q.right);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 
       
     </div>
@@ -442,8 +452,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/09/226-InvertBinaryTree/" rel="next" title="226. Invert Binary Tree">
-                <i class="fa fa-chevron-left"></i> 226. Invert Binary Tree
+              <a href="/2018/12/09/96-UniqueBinarySearchTrees/" rel="next" title="96. Unique Binary Search Trees">
+                <i class="fa fa-chevron-left"></i> 96. Unique Binary Search Trees
               </a>
             
           </div>
@@ -451,10 +461,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/09/96-UniqueBinarySearchTrees/" rel="prev" title="96. Unique Binary Search Trees">
-                96. Unique Binary Search Trees <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -586,7 +592,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#173-Binary-Search-Tree-Iterator"><span class="nav-number">1.</span> <span class="nav-text">173. Binary Search Tree Iterator</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Idea"><span class="nav-number">2.0.1.</span> <span class="nav-text">Idea</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Corner-case"><span class="nav-number">2.0.2.</span> <span class="nav-text">Corner case</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number">2.0.3.</span> <span class="nav-text">Code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#100-Same-Tree"><span class="nav-number">1.</span> <span class="nav-text">100. Same Tree</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Idea"><span class="nav-number">2.0.1.</span> <span class="nav-text">Idea</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Corner-case"><span class="nav-number">2.0.2.</span> <span class="nav-text">Corner case</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number">2.0.3.</span> <span class="nav-text">Code</span></a></li></ol></li></ol></div>
             
 
           </div>

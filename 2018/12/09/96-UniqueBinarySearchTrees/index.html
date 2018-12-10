@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="96. Unique Binary Search TreesLeetcode Link Given n, how many structurally unique BST’s (binary search trees) that store values 1 … n? Example:  Input: 3Output: 5Explanation:Given n = 3, there are a t">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-10T02:30:37.896Z">
+<meta property="og:updated_time" content="2018-12-10T02:37:55.352Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="96. Unique Binary Search Trees">
 <meta name="twitter:description" content="96. Unique Binary Search TreesLeetcode Link Given n, how many structurally unique BST’s (binary search trees) that store values 1 … n? Example:  Input: 3Output: 5Explanation:Given n = 3, there are a t">
@@ -420,16 +420,17 @@
 </ul>
 <p>That is, the schema of n=2 could be used to n = 3</p>
 <ul>
-<li>Now, if we abstract 999 as X, we could have the following situations:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">     X        X         X</span><br><span class="line">    / \      / \       / \</span><br><span class="line">  0LN 2RN   1LN 1RN   2LN 0LN</span><br><span class="line"></span><br><span class="line">LN: left nodes. 0LN means 0 left nodes</span><br><span class="line">RN: right nodes. 2RN means 2 right nodes.</span><br></pre></td></tr></table></figure>
+<li>Now, if we abstract 999 as X, we could have the following situations:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">X      X                X               X      X</span><br><span class="line"> \      \              / \             /      /</span><br><span class="line">  10     5            5   10          10     5</span><br><span class="line"> /        \                          /        \</span><br><span class="line">5          10                       5          10</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">     X                  X                X</span><br><span class="line">    / \                / \              / \</span><br><span class="line">  0LN 2RN            1LN 1RN          2LN 0LN</span><br><span class="line"></span><br><span class="line">LN: left nodes. 0LN means 0 left nodes</span><br><span class="line">RN: right nodes. 2RN means 2 right nodes.</span><br></pre></td></tr></table></figure>
 <p>At the 2RN or 2LN scenario, we already know that we have 2 possible result<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">5       10</span><br><span class="line"> \     /</span><br><span class="line"> 10   5</span><br></pre></td></tr></table></figure></p>
 <p>At the 1RN or 1LN scenario, we already know that we have 1 possible result<br>Then what we need to do is add up all these together then we could get the answer of 3LN and 3RN. So on so forth until we get n nodes</p>
 <h4 id="Corner-case"><a href="#Corner-case" class="headerlink" title="Corner case"></a>Corner case</h4><ul>
 <li>DP[0] = 1 — initial state of this dp solution</li>
 </ul>
 <h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><ol>
-<li>DP<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numTrees</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n&lt;=<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span>[] src = <span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>];</span><br><span class="line">    src[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    src[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=i-<span class="number">1</span>;j++)&#123;</span><br><span class="line">            <span class="comment">//src[2] = src[0]*src[1] + src[1]*src[0]</span></span><br><span class="line">            src[i] += src[j]*src[i-j-<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> src[n];</span><br><span class="line">&#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<li>DP<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numTrees</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n&lt;=<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span>[] src = <span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>];</span><br><span class="line">    src[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    src[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=i-<span class="number">1</span>;j++)&#123;</span><br><span class="line">            <span class="comment">//src[2] = src[0]*src[1] + src[1]*src[0]</span></span><br><span class="line">            src[i] += src[j]*src[i-j-<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> src[n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 
@@ -475,6 +476,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/09/100-SameTree/" rel="prev" title="100. Same Tree">
+                100. Same Tree <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -551,7 +556,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
