@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[139. Word Break]]></title>
+    <url>%2F2018%2F12%2F10%2F139-WordBreak%2F</url>
+    <content type="text"><![CDATA[338. Counting BitsLeetcode Link Given a non negative integer number num. For every numbers i in the range 0 ≤ i ≤ num calculate the number of 1’s in their binary representation and return them as an array. Example 1:12Input: 2Output: [0,1,1] Example 2:12Input: 5Output: [0,1,1,2,1,2] Example: SolutionIdea It’s easy to come up with an O(n*sizeof(integer)) solution, we just need to use Integer.toBinaryString(num) to every value from 0 to num-1, then count the number of 1 A more efficient solution is to use dynamic programming. Now, instead of considering binary format, let’s think about decimal version: Imagine we want to know how many 1s in 101010, what we can do? We could use the number of 10101 + 0, that is numOfOne[101010/10] + numOfOne[101010%10] Then we could further get the number of 10101 by adding numOfOne[10101/10] + numOfOne[10101%10], so on so forth Now, if we know how to solve this problem with a decimal version, then for the binary version, we just need to change num/10 and num%10 to num/2 and num%2 Corner case DP[0] = 0 — initial state of this dp solution Code DP12345678910public int[] countBits(int num) &#123; if(num==0) return new int[]&#123;0&#125;; int[] res = new int[num+1]; res[0] = 0; res[1] = 1; for(int i=2;i&lt;res.length;i++)&#123; res[i] = res[i/2] + res[i%2]; &#125; return res;&#125;]]></content>
+      <categories>
+        <category>Leetcode</category>
+        <category>Dynamic programming</category>
+        <category>Leetcode</category>
+        <category>Backtracking</category>
+      </categories>
+      <tags>
+        <tag>Leetcode</tag>
+        <tag>Algorithms</tag>
+        <tag>Dynamic programming</tag>
+        <tag>Backtracking</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[338. Counting Bits]]></title>
     <url>%2F2018%2F12%2F10%2F338-CountingBits%2F</url>
     <content type="text"><![CDATA[338. Counting BitsLeetcode Link Given a non negative integer number num. For every numbers i in the range 0 ≤ i ≤ num calculate the number of 1’s in their binary representation and return them as an array. Example 1:12Input: 2Output: [0,1,1] Example 2:12Input: 5Output: [0,1,1,2,1,2] Example: SolutionIdea It’s easy to come up with an O(n*sizeof(integer)) solution, we just need to use Integer.toBinaryString(num) to every value from 0 to num-1, then count the number of 1 A more efficient solution is to use dynamic programming. Now, instead of considering binary format, let’s think about decimal version: Imagine we want to know how many 1s in 101010, what we can do? We could use the number of 10101 + 0, that is numOfOne[101010/10] + numOfOne[101010%10] Then we could further get the number of 10101 by adding numOfOne[10101/10] + numOfOne[10101%10], so on so forth Now, if we know how to solve this problem with a decimal version, then for the binary version, we just need to change num/10 and num%10 to num/2 and num%2 Corner case DP[0] = 0 — initial state of this dp solution Code DP12345678910public int[] countBits(int num) &#123; if(num==0) return new int[]&#123;0&#125;; int[] res = new int[num+1]; res[0] = 0; res[1] = 1; for(int i=2;i&lt;res.length;i++)&#123; res[i] = res[i/2] + res[i%2]; &#125; return res;&#125;]]></content>
