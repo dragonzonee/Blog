@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="104. Maximum Depth of Binary TreeLink Given a binary tree, find its maximum depth. The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node. No">
+<meta name="description" content="173. Binary Search Tree IteratorLink Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST. Calling next() will return the next smallest">
 <meta name="keywords" content="Leetcode,Algorithms,Tree">
 <meta property="og:type" content="article">
-<meta property="og:title" content="104. Maximum Depth of Binary Tree">
-<meta property="og:url" content="http://yoursite.com/2018/12/09/104_MaximumDepthofBinaryTree/index.html">
+<meta property="og:title" content="173. Binary Search Tree Iterator">
+<meta property="og:url" content="http://yoursite.com/2018/12/09/173-BinarySearchTreeIterator/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="104. Maximum Depth of Binary TreeLink Given a binary tree, find its maximum depth. The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node. No">
+<meta property="og:description" content="173. Binary Search Tree IteratorLink Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST. Calling next() will return the next smallest">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-09T11:47:27.178Z">
+<meta property="og:updated_time" content="2018-12-10T02:00:42.481Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="104. Maximum Depth of Binary Tree">
-<meta name="twitter:description" content="104. Maximum Depth of Binary TreeLink Given a binary tree, find its maximum depth. The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node. No">
+<meta name="twitter:title" content="173. Binary Search Tree Iterator">
+<meta name="twitter:description" content="173. Binary Search Tree IteratorLink Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST. Calling next() will return the next smallest">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/09/104_MaximumDepthofBinaryTree/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/09/173-BinarySearchTreeIterator/">
 
 
 
 
 
-  <title>104. Maximum Depth of Binary Tree | Blog</title>
+  <title>173. Binary Search Tree Iterator | Blog</title>
   
 
 
@@ -295,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/09/104_MaximumDepthofBinaryTree/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/09/173-BinarySearchTreeIterator/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="dragonzonee">
@@ -312,7 +312,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">104. Maximum Depth of Binary Tree</h1>
+          <h1 class="post-title" itemprop="name headline">173. Binary Search Tree Iterator</h1>
         
 
         <div class="post-meta">
@@ -324,7 +324,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-09T03:39:13-08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-09T17:52:36-08:00">
                 2018-12-09
               </time>
             
@@ -395,33 +395,19 @@
       
 
       
-        <h2 id="104-Maximum-Depth-of-Binary-Tree"><a href="#104-Maximum-Depth-of-Binary-Tree" class="headerlink" title="104. Maximum Depth of Binary Tree"></a>104. Maximum Depth of Binary Tree</h2><p><a href="https://leetcode.com/problemset/all/" target="_blank" rel="noopener">Link</a></p>
-<p>Given a binary tree, find its maximum depth.</p>
-<p>The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.</p>
-<p><strong>Note:</strong> A leaf is a node with no children.</p>
-<blockquote>
-<p>Example 1<br>Given binary tree [3,9,20,null,null,15,7],<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  3</span><br><span class="line"> / \</span><br><span class="line">9  20</span><br><span class="line">  /  \</span><br><span class="line"> 15   7</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>return its depth = 3.</p>
-</blockquote>
+        <h2 id="173-Binary-Search-Tree-Iterator"><a href="#173-Binary-Search-Tree-Iterator" class="headerlink" title="173. Binary Search Tree Iterator"></a>173. Binary Search Tree Iterator</h2><p><a href="https://leetcode.com/problems/binary-search-tree-iterator/description/" target="_blank" rel="noopener">Link</a></p>
+<p>Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST.</p>
+<p>Calling next() will return the next smallest number in the BST.</p>
+<p>Note: <strong>next()</strong> and <strong>hasNext()</strong> should run in average O(1) time and uses O(h) memory, where h is the height of the tree.</p>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><h4 id="Idea"><a href="#Idea" class="headerlink" title="Idea"></a>Idea</h4><ul>
-<li>This is the most common tree probing problem, if you can’t come up with one solution in 5 seconds, then I suggest you first read this post <a href="https://dragonzonee.github.io/2018/12/08/Tree/" target="_blank" rel="noopener">Link</a> first</li>
+<li>This is a typical problem of using pre-order traversal method to solve it. If it’s your first time hearing about pre-order traversal, I suggest you read this post <a href="https://dragonzonee.github.io/2018/12/08/Tree/" target="_blank" rel="noopener">Link</a> first</li>
 </ul>
+<p>Basically we need to use a stack to save node’s values and do a pre-order traversal to the BST. At each next() operation, we pop out the smallest value and push the current smallest value into the stack again.</p>
+<p>There is a common schema to do a pre-order traversal, I will just write the code.</p>
 <h4 id="Corner-case"><a href="#Corner-case" class="headerlink" title="Corner case"></a>Corner case</h4><ul>
 <li>Tree is null</li>
 </ul>
-<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><ol>
-<li><p>BFS</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxDepth</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">     <span class="keyword">if</span>(root==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">     <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">     Stack&lt;TreeNode&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">     Stack&lt;Integer&gt; levels = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">     levels.push(<span class="number">1</span>);</span><br><span class="line">     stack.push(root);</span><br><span class="line">     <span class="keyword">while</span>(!stack.isEmpty())&#123;</span><br><span class="line">         <span class="keyword">int</span> level = levels.pop();</span><br><span class="line">         res = Math.max(res, level);</span><br><span class="line">         TreeNode node = stack.pop();</span><br><span class="line">         <span class="keyword">if</span>(node.left!=<span class="keyword">null</span>)&#123;</span><br><span class="line">             stack.push(node.left);</span><br><span class="line">             levels.push(level+<span class="number">1</span>);</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="keyword">if</span>(node.right!=<span class="keyword">null</span>)&#123;</span><br><span class="line">             stack.push(node.right);</span><br><span class="line">             levels.push(level+<span class="number">1</span>);</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">return</span> res;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>DFS</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxDepth</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    Queue&lt;TreeNode&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">    queue.offer(root);</span><br><span class="line">    <span class="keyword">while</span>(!queue.isEmpty())&#123;</span><br><span class="line">        <span class="keyword">int</span> size = queue.size();</span><br><span class="line">        res++;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;size;i++)&#123;</span><br><span class="line">            TreeNode node = queue.poll();</span><br><span class="line">            <span class="keyword">if</span>(node.left!=<span class="keyword">null</span>) queue.offer(node.left);</span><br><span class="line">            <span class="keyword">if</span>(node.right!=<span class="keyword">null</span>) queue.offer(node.right);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Recursion</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxDepth</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>+ Math.max(maxDepth(root.left),maxDepth(root.right));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BSTIterator</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> TreeNode root;</span><br><span class="line">    <span class="keyword">private</span> Stack&lt;TreeNode&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">BSTIterator</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.root = root;</span><br><span class="line">        <span class="keyword">while</span>(root!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            stack.push(root);</span><br><span class="line">            root = root.left;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** <span class="doctag">@return</span> whether we have a next smallest number */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasNext</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> !stack.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** <span class="doctag">@return</span> the next smallest number */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">next</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        TreeNode temNode = stack.pop();</span><br><span class="line">        <span class="keyword">int</span> res = temNode.val;</span><br><span class="line">        temNode = temNode.right;</span><br><span class="line">        <span class="keyword">while</span>(temNode!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            stack.push(temNode);</span><br><span class="line">            temNode = temNode.left;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -456,8 +442,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/08/Leetcode/" rel="next" title="Leetcode">
-                <i class="fa fa-chevron-left"></i> Leetcode
+              <a href="/2018/12/09/226-InvertBinaryTree/" rel="next" title="226. Invert Binary Tree">
+                <i class="fa fa-chevron-left"></i> 226. Invert Binary Tree
               </a>
             
           </div>
@@ -465,10 +451,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/09/226-InvertBinaryTree/" rel="prev" title="226. Invert Binary Tree">
-                226. Invert Binary Tree <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -600,7 +582,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#104-Maximum-Depth-of-Binary-Tree"><span class="nav-number">1.</span> <span class="nav-text">104. Maximum Depth of Binary Tree</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Idea"><span class="nav-number">2.0.1.</span> <span class="nav-text">Idea</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Corner-case"><span class="nav-number">2.0.2.</span> <span class="nav-text">Corner case</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number">2.0.3.</span> <span class="nav-text">Code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#173-Binary-Search-Tree-Iterator"><span class="nav-number">1.</span> <span class="nav-text">173. Binary Search Tree Iterator</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Idea"><span class="nav-number">2.0.1.</span> <span class="nav-text">Idea</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Corner-case"><span class="nav-number">2.0.2.</span> <span class="nav-text">Corner case</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number">2.0.3.</span> <span class="nav-text">Code</span></a></li></ol></li></ol></div>
             
 
           </div>
